@@ -17,7 +17,7 @@ class OperationController extends Controller {
                 'redeemScript' => config('services.sign.secret')
             ];
             
-            return response($this->_encryptResponse($data), 200);
+            return $this->_encryptResponse($data);
             
         } catch (\Exception $ex) {
             
