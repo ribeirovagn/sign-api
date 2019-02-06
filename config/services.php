@@ -35,9 +35,8 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
-    'sign' => [
-        'key' => env('SIGN_KEY'),
-        'secret' => env('SIGN_SECRET'),
-    ],
-
+    'bitcoin' => [
+        'key' => env('BITCOIN_SIGN_KEY'),
+        'reedemScript' => env('BITCOIN_SIGN_REEDEM'),        
+    ]
 ];
