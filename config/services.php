@@ -35,26 +35,26 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
-    
+
     // CRYPTOCURRENCIES
     'bitcoin' => [
         'key' => env('BITCOIN_SIGN_KEY'),
-        'reedemScript' => env('BITCOIN_SIGN_REEDEM'),        
+        'reedemScript' => env('BITCOIN_SIGN_REEDEM'),
     ],
 
     'bitcoin_cash' => [
         'key' => env('BITCOIN_CASH_SIGN_KEY'),
-        'reedemScript' => env('BITCOIN_CASH_SIGN_REEDEM'),        
+        'reedemScript' => env('BITCOIN_CASH_SIGN_REEDEM'),
     ],
 
     'zcash' => [
         'key' => env('ZCASH_SIGN_KEY'),
-        'reedemScript' => env('ZCASH_SIGN_REEDEM'),        
+        'reedemScript' => env('ZCASH_SIGN_REEDEM'),
     ],
-    
+
 
     'dash' => [
         'key' => env('DASH_SIGN_KEY'),
-        'reedemScript' => env('DASH_SIGN_REEDEM'),        
-    ]    
+        'reedemScript' => env('DASH_SIGN_REEDEM'),
+    ]
 ];
