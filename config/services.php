@@ -39,22 +39,22 @@ return [
     // CRYPTOCURRENCIES
     'bitcoin' => [
         'key' => env('BITCOIN_SIGN_KEY'),
-        'reedemScript' => env('BITCOIN_SIGN_REEDEM'),
+        'reedemScript' => env('BITCOIN_SIGN_REDEEM'),
     ],
 
     'bitcoin_cash' => [
         'key' => env('BITCOIN_CASH_SIGN_KEY'),
-        'reedemScript' => env('BITCOIN_CASH_SIGN_REEDEM'),
+        'reedemScript' => env('BITCOIN_CASH_SIGN_REDEEM'),
     ],
 
     'zcash' => [
         'key' => env('ZCASH_SIGN_KEY'),
-        'reedemScript' => env('ZCASH_SIGN_REEDEM'),
+        'reedemScript' => env('ZCASH_SIGN_REDEEM'),
     ],
 
 
     'dash' => [
         'key' => env('DASH_SIGN_KEY'),
-        'reedemScript' => env('DASH_SIGN_REEDEM'),
+        'reedemScript' => env('DASH_SIGN_REDEEM'),
     ]
 ];
