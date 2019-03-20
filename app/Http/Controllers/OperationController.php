@@ -14,7 +14,7 @@ class OperationController extends Controller {
 
             $data = [
                 'key' => config('services.' . $input['coin'] . '.key'),
-                'redeemScript' => config('services.' . $input['coin'] . '.secret')
+                'redeemScript' => config('services.' . $input['coin'] . '.reedemScript')
             ];
             
             return $this->_encryptResponse($data);
