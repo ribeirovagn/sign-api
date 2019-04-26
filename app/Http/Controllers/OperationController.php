@@ -13,18 +13,17 @@ class OperationController extends Controller {
 
 
             $data = [
-                'key' => config('services.' . $input['coin'] . '.key'),
-                'redeemScript' => config('services.' . $input['coin'] . '.reedemScript')
+                'key' => config('services.offscreen.' . $input['offscreen'] . '.' . $input['coin'] . '.key'),
+                'redeemScript' => config('services.offscreen.' . $input['offscreen'] . '.' . $input['coin'] . '.reedemScript')
             ];
-            
+
             return $this->_encryptResponse($data);
-            
         } catch (\Exception $ex) {
-            
+
             $error = [
                 'error' => $ex->getMessage()
             ];
-            
+
             return response($error, 422);
         }
     }
