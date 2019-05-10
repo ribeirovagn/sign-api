@@ -13,10 +13,8 @@ class OperationController extends Controller {
         try {
             $input = $request->all();
             $input = $this->_decryptRequest($input[0]);
-            $user = User::where('name', $input['offscreen'])->first();
-            $coin = Coin::where('name', $input['coin'])->first();
-            $PrivateKey = PrivateKey::where('user_id', $user->id)->where('coin_id', $coin->id)->first();
-                        
+            $privateKeyController = new PrivateKeyController();
+            $PrivateKey = $privateKeyController->show($input['offscreen'], $input['coin']);
             return $this->_encryptResponse($PrivateKey);
 
         } catch (\Exception $ex) {

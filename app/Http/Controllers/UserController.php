@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Coin;
 use Illuminate\Http\Request;
-use App\Coin;
+use App\User;
 
-class CoinController extends Controller {
+class UserController extends Controller {
 
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class CoinController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return Coin::all();
+        return User::all();
     }
 
 
@@ -29,9 +28,9 @@ class CoinController extends Controller {
 
         try {
 
-            Coin::create([
+            User::create([
                 'name' => $input['name'],
-                'abbr' => $input['abbr'],
+                'ip' => $input['ip']
             ]);
         } catch (Exception $ex) {
             return $ex->getMessage();
@@ -42,17 +41,16 @@ class CoinController extends Controller {
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Coin  $coin
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Coin $coin) {
+    public function update(Request $request, $id) {
         $input = $request->all();
-
         try {
-            $coin = Coin::find($id);
-            $coin->name = $input['name'];
-            $coin->abbr = $input['abbr'];
-            $coin->save();
+            $user = User::find($id);
+            $user->name = $input['name'];
+            $user->ip = $input['ip'];
+            $user->save();
         } catch (Exception $ex) {
             return $ex->getMessage();
         }

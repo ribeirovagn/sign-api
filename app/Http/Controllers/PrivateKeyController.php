@@ -4,27 +4,33 @@ namespace App\Http\Controllers;
 
 use App\Private_Key;
 use Illuminate\Http\Request;
+use App\PrivateKey;
+use App\Coin;
+use App\User;
 
-class PrivateKeyController extends Controller
-{
+class PrivateKeyController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+    public function index() {
+        $PrivateKeys = PrivateKey::all();
+        $OperationController = new OperationController();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $keys = [];
+
+        foreach ($PrivateKeys as $PrivateKey) {
+            $keys[] = [
+                'user_id' => $PrivateKey->user_id,
+                'coin_id' => $PrivateKey->coin_id,
+                'key' => $OperationController->_decryptRequest($PrivateKey->key),
+                'redeemScript' => $OperationController->_decryptRequest($PrivateKey->redeemScript)
+            ];
+        }
+
+        return $keys;
     }
 
     /**
@@ -33,9 +39,28 @@ class PrivateKeyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request) {
+        $OperationController = new OperationController();
+        try {
+            $input = $request->all();
+
+            $this->validate($input, [
+                'user_id' => 'required',
+                'coin_id' => 'required',
+                'key' => 'required',
+                'redeemScript' => 'required'
+            ]);
+
+
+            PrivateKey::create([
+                'user_id' => $input['user_id'],
+                'coin_id' => $input['coin_id'],
+                'key' => $OperationController->_encryptResponse($input['key']),
+                'redeemScript' => $OperationController->_encryptResponse($input['redeemScript'])
+            ]);
+        } catch (\Exception $ex) {
+            return $ex->getMessage();
+        }
     }
 
     /**
@@ -44,9 +69,16 @@ class PrivateKeyController extends Controller
      * @param  \App\Private_Key  $private_Key
      * @return \Illuminate\Http\Response
      */
-    public function show(Private_Key $private_Key)
-    {
-        //
+    public function show($offscreen, $coin) {
+        $OperationController = new OperationController();
+        $user = User::where('name', $offscreen)->first();
+        $coin = Coin::where('name', $coin)->first();
+        $PrivateKey = PrivateKey::where('user_id', $user->id)->where('coin_id', $coin->id)->first();
+
+        return [
+            'key' => $OperationController->_decryptRequest($PrivateKey->key),
+            'redeemScript' => $OperationController->_decryptRequest($PrivateKey->redeemScript)
+        ];
     }
 
     /**
@@ -55,8 +87,7 @@ class PrivateKeyController extends Controller
      * @param  \App\Private_Key  $private_Key
      * @return \Illuminate\Http\Response
      */
-    public function edit(Private_Key $private_Key)
-    {
+    public function edit(Private_Key $private_Key) {
         //
     }
 
@@ -67,8 +98,7 @@ class PrivateKeyController extends Controller
      * @param  \App\Private_Key  $private_Key
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Private_Key $private_Key)
-    {
+    public function update(Request $request, Private_Key $private_Key) {
         //
     }
 
@@ -78,8 +108,8 @@ class PrivateKeyController extends Controller
      * @param  \App\Private_Key  $private_Key
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Private_Key $private_Key)
-    {
+    public function destroy(Private_Key $private_Key) {
         //
     }
+
 }

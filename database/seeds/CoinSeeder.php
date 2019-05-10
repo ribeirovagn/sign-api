@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Coin;
 use App\PrivateKey;
+use App\Http\Controllers\OperationController;
 
 class CoinSeeder extends Seeder {
 
@@ -65,12 +66,13 @@ class CoinSeeder extends Seeder {
             'abbr' => 'ETH',
         ]);
 
+        $OperationController = new OperationController();
 
         PrivateKey::create([
             'user_id' => 2,
             'coin_id' => 1,
-            'key' => "TESTING",
-            'redeemScript' => "TESTING"
+            'key' => $OperationController->_encryptResponse("TESTING key"),
+            'redeemScript' => $OperationController->_encryptResponse("TESTING redeem")
         ]);
     }
 
