@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\PrivateKey;
+use App\Coin;
+use App\User;
 
 class OperationController extends Controller {
 
@@ -10,14 +13,12 @@ class OperationController extends Controller {
         try {
             $input = $request->all();
             $input = $this->_decryptRequest($input[0]);
+            $user = User::where('name', $input['offscreen'])->first();
+            $coin = Coin::where('name', $input['coin'])->first();
+            $PrivateKey = PrivateKey::where('user_id', $user->id)->where('coin_id', $coin->id)->first();
+                        
+            return $this->_encryptResponse($PrivateKey);
 
-
-            $data = [
-                'key' => config('services.offscreen.' . $input['offscreen'] . '.' . $input['coin'] . '.key'),
-                'redeemScript' => config('services.offscreen.' . $input['offscreen'] . '.' . $input['coin'] . '.reedemScript')
-            ];
-
-            return $this->_encryptResponse($data);
         } catch (\Exception $ex) {
 
             $error = [
