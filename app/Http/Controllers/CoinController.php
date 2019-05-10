@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Coin;
 use Illuminate\Http\Request;
-use App\Coin;
 
 class CoinController extends Controller {
 

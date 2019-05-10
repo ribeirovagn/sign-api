@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Private_Key;
 use Illuminate\Http\Request;
 use App\PrivateKey;
 use App\Coin;
