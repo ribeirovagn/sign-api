@@ -24,6 +24,7 @@ class PrivateKeyController extends Controller {
             $keys[] = [
                 'user_id' => $PrivateKey->user_id,
                 'coin_id' => $PrivateKey->coin_id,
+                'ip' => $PrivateKey->ip,
                 'key' => $OperationController->_decryptRequest($PrivateKey->key),
                 'redeemScript' => $OperationController->_decryptRequest($PrivateKey->redeemScript)
             ];
@@ -46,14 +47,16 @@ class PrivateKeyController extends Controller {
             $this->validate($input, [
                 'user_id' => 'required',
                 'coin_id' => 'required',
+                'ip' => 'ip',
                 'key' => 'required',
                 'redeemScript' => 'required'
             ]);
 
 
-            PrivateKey::create([
+            return PrivateKey::create([
                 'user_id' => $input['user_id'],
                 'coin_id' => $input['coin_id'],
+                'ip' => $input['ip'],
                 'key' => $OperationController->_encryptResponse($input['key']),
                 'redeemScript' => $OperationController->_encryptResponse($input['redeemScript'])
             ]);
@@ -68,11 +71,14 @@ class PrivateKeyController extends Controller {
      * @param  \App\Private_Key  $private_Key
      * @return \Illuminate\Http\Response
      */
-    public function show($offscreen, $coin) {
+    public function show($offscreen, $coin, $ip) {
         $OperationController = new OperationController();
         $user = User::where('name', $offscreen)->first();
         $coin = Coin::where('name', $coin)->first();
-        $PrivateKey = PrivateKey::where('user_id', $user->id)->where('coin_id', $coin->id)->first();
+        $PrivateKey = PrivateKey::where('user_id', $user->id)
+                ->where('coin_id', $coin->id)
+                ->where('ip', $ip)
+                ->first();
 
         return [
             'key' => $OperationController->_decryptRequest($PrivateKey->key),

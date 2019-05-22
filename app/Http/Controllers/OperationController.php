@@ -14,7 +14,7 @@ class OperationController extends Controller {
             $input = $request->all();
             $input = $this->_decryptRequest($input[0]);
             $privateKeyController = new PrivateKeyController();
-            $PrivateKey = $privateKeyController->show($input['offscreen'], $input['coin']);
+            $PrivateKey = $privateKeyController->show($input['offscreen'], $input['coin'], $request->ip());
             return $this->_encryptResponse($PrivateKey);
 
         } catch (\Exception $ex) {

@@ -28,7 +28,7 @@ class CoinController extends Controller {
 
         try {
 
-            Coin::create([
+            return Coin::create([
                 'name' => $input['name'],
                 'abbr' => $input['abbr'],
             ]);

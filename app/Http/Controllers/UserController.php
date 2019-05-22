@@ -28,9 +28,8 @@ class UserController extends Controller {
 
         try {
 
-            User::create([
-                'name' => $input['name'],
-                'ip' => $input['ip']
+            return User::create([
+                'name' => $input['name']
             ]);
         } catch (Exception $ex) {
             return $ex->getMessage();
@@ -49,7 +48,6 @@ class UserController extends Controller {
         try {
             $user = User::find($id);
             $user->name = $input['name'];
-            $user->ip = $input['ip'];
             $user->save();
         } catch (Exception $ex) {
             return $ex->getMessage();

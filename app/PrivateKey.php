@@ -10,6 +10,7 @@ class PrivateKey extends Model {
         'user_id',
         'coin_id',
         'key',
+        'ip',
         'redeemScript'
     ];
     protected $hidden = [

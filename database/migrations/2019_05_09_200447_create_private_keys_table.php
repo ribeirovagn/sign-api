@@ -17,8 +17,9 @@ class CreatePrivateKeysTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('coin_id')->unsigned();
-            $table->string('key');
-            $table->string('redeemScript');
+            $table->ipAddress('ip');
+            $table->text('key');
+            $table->text('redeemScript');
             $table->timestamps();
         });
     }
