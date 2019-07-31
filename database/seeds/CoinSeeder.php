@@ -21,6 +21,9 @@ class CoinSeeder extends Seeder {
         $navi = User::create([
             'name' => 'navi',
         ]);
+        $navipay = User::create([
+            'name' => 'navipay',
+        ]);
 
 
 
@@ -76,6 +79,10 @@ class CoinSeeder extends Seeder {
                     'name' => 'Ether',
                     'abbr' => 'ETH',
         ]);
+        $LQX = Coin::create([
+            'name' => 'LQX',
+            'abbr' => 'LQX',
+]);        
 
         $OperationController = new OperationController();
 
@@ -108,7 +115,7 @@ class CoinSeeder extends Seeder {
             'user_id' => $liquidex->id,
             'coin_id' => $DASH->id,
             'ip' => "172.31.35.87",
-            'key' => $OperationController->_encryptResponse("zaq12wsx"),
+            'key' => $OperationController->_encryptResponse("5b37cea71e4aac8f438ad42b55de2c55f0968d3b490a16bdf80b648f7a70ad4d"),
             'redeemScript' => $OperationController->_encryptResponse("TESTING redeem")
         ]);
 
@@ -119,7 +126,7 @@ class CoinSeeder extends Seeder {
             'user_id' => $liquidex->id,
             'coin_id' => $LTC->id,
             'ip' => "172.31.14.205",
-            'key' => $OperationController->_encryptResponse("zaq12wsx"),
+            'key' => $OperationController->_encryptResponse("983b911c3b0af63818a15f995447f4d424a155d4092f46a0ecf30b11e5e43b3a"),
             'redeemScript' => $OperationController->_encryptResponse("TESTING redeem")
         ]);
 
@@ -130,10 +137,19 @@ class CoinSeeder extends Seeder {
             'user_id' => $liquidex->id,
             'coin_id' => $BCH->id,
             'ip' => "172.31.2.158",
-            'key' => $OperationController->_encryptResponse("zaq12wsx"),
+            'key' => $OperationController->_encryptResponse("5b37cea71e4aac8f438ad42b55de2c55f0968d3b490a16bdf80b648f7a70ad4d"),
             'redeemScript' => $OperationController->_encryptResponse("TESTING redeem")
         ]);
-
+        /**
+         * LQX / Liquidex
+         */
+        PrivateKey::create([
+            'user_id' => $liquidex->id,
+            'coin_id' => $LQX->id,
+            'ip' => "172.17.255.255",
+            'key' => $OperationController->_encryptResponse("4B4CEE42FFC0111BAD1155898ED5BF336DF752E8303D5EBA6B695F27ECFF09A3"),
+            'redeemScript' => $OperationController->_encryptResponse("TESTING redeem")
+        ]);
     }
 
 }
