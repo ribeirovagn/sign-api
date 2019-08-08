@@ -20,7 +20,7 @@ class OperationController extends Controller {
         } catch (\Exception $ex) {
 
             $error = [
-                'error' => $ex->getMessage()
+                'error' => "SIGN ERROR: " . $ex->getMessage()
             ];
 
             return response($error, 422);

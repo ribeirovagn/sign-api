@@ -13,11 +13,11 @@ class KeySeeder extends Seeder {
     public function run() {
         User::create([
             'name' => 'liquidex',
-            'ip' => ''
+            'ip' => '127.0.0.1'
         ]);
         User::create([
             'name' => 'navi',
-            'ip' => '127.0.0.1'
+            'ip' => ''
         ]);
     }
 
