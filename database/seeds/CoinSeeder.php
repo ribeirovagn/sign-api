@@ -150,6 +150,83 @@ class CoinSeeder extends Seeder
             'key' => $OperationController->_encryptResponse("4B4CEE42FFC0111BAD1155898ED5BF336DF752E8303D5EBA6B695F27ECFF09A3"),
             'redeemScript' => $OperationController->_encryptResponse("TESTING redeem"),
         ]);
+        
+        
+        
+        
+        /////////////////  ///////////////////////////
+        ////////////////  ////////////////////////////
+        /////////////////////  ///////////////////////
+        ////////////////////  ////////////////////////
+        ///////////////////  /////////////////////////
+        ////////////////////  ////////////////////////
+        /////////////////////  ///////////////////////
+        //////////////////////  //////////////////////
+        ///////////////////////  /////////////////////
+        ////////////////////////  ////////////////////
+        ///////////////////////  /////////////////////
+        //////////////////////  //////////////////////
+        /////////////////////  ///////////////////////
+        ////////////////////  ////////////////////////
+        //////////////////////  //////////////////////
+        ////////////////////////  ////////////////////
+        
+        
+        /**
+         * LQX / NAVIPAY
+         */
+        PrivateKey::create([
+            'user_id' => $navipay->id,
+            'coin_id' => $LQX->id,
+            'ip' => "52.23.55.199",
+            'key' => $OperationController->_encryptResponse("1A0ABF27B294583CE8C1DA5B10C883CCFAD28B099BF2C87443786426ABEBD3D7"),
+            'redeemScript' => $OperationController->_encryptResponse("TESTING redeem"),
+        ]);
+        
+        /**
+         * BTC / NAVIPAY
+         */
+        PrivateKey::create([
+            'user_id' => $navipay->id,
+            'coin_id' => $BTC->id,
+            'ip' => "3.219.68.171",
+            'key' => $OperationController->_encryptResponse("2B225AD3AA04A411812CE0DD138635347D407E056E9C6BA636F3F4C1614650CC"),
+            'redeemScript' => $OperationController->_encryptResponse("TESTING redeem"),
+        ]);      
+        
+
+        /**
+         * DASH / NAVIPAY
+         */
+        PrivateKey::create([
+            'user_id' => $navipay->id,
+            'coin_id' => $DASH->id,
+            'ip' => "3.85.71.117",
+            'key' => $OperationController->_encryptResponse("4D6C0EE1291179592192D60EE9049799E70BAFAFA8C3DE35088DFA913C4BF1D8"),
+            'redeemScript' => $OperationController->_encryptResponse("TESTING redeem"),
+        ]);
+
+        /**
+         * LITE / NAVIPAY
+         */
+        PrivateKey::create([
+            'user_id' => $navipay->id,
+            'coin_id' => $LTC->id,
+            'ip' => "3.223.22.142",
+            'key' => $OperationController->_encryptResponse("B32618C4454291804583CA14DA6F3702B0F08F5F9D009DE47C337636FA5AE2B1"),
+            'redeemScript' => $OperationController->_encryptResponse("TESTING redeem"),
+        ]);
+
+        /**
+         * BCH / NAVIPAY
+         */
+        PrivateKey::create([
+            'user_id' => $navipay->id,
+            'coin_id' => $BCH->id,
+            'ip' => "3.222.62.152",
+            'key' => $OperationController->_encryptResponse("7E9DBC721298F90175C8B5D23604E18BDE67280EC54A30E332386A821668AE29"),
+            'redeemScript' => $OperationController->_encryptResponse("TESTING redeem"),
+        ]);
     }
 
 }
