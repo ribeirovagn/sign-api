@@ -21,7 +21,7 @@ class CoinSeeder extends Seeder
             'name' => 'liquidex',
         ]);
         $navi = User::create([
-            'name' => 'navi',
+            'name' => 'navicapital',
         ]);
         $navipay = User::create([
             'name' => 'navipay',
@@ -140,7 +140,17 @@ class CoinSeeder extends Seeder
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
         ]);
         
-        
+        /**
+         * LQX / Liquidex
+         */
+        PrivateKey::create([
+            'user_id' => $liquidex->id,
+            'coin_id' => $ETH->id,
+            'ip' => "127.0.0.1",
+            'key' => $OperationController->_encryptResponse("humble vehicle spend alarm subway message cousin air level document region escape"),
+            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+        ]);
+                
         
         
         /////////////////  ///////////////////////////
@@ -184,38 +194,71 @@ class CoinSeeder extends Seeder
         ]);      
         
 
+
+        /////////////////  ///////////////////////////
+        ////////////////  ////////////////////////////
+        /////////////////////  ///////////////////////
+        ////////////////////  ////////////////////////
+        ///////////////////  /////////////////////////
+        ////////////////////  ////////////////////////
+        /////////////////////  ///////////////////////
+        //////////////////////  //////////////////////
+        ///////////////////////  /////////////////////
+        ////////////////////////  ////////////////////
+        ///////////////////////  /////////////////////
+        //////////////////////  //////////////////////
+        /////////////////////  ///////////////////////
+        ////////////////////  ////////////////////////
+        //////////////////////  //////////////////////
+        ////////////////////////  ////////////////////
+        
+
+
         /**
-         * DASH / NAVIPAY
+         * BTC / navi
          */
         PrivateKey::create([
-            'user_id' => $navipay->id,
+            'user_id' => $navi->id,
+            'coin_id' => $BTC->id,
+            'ip' => "3.219.68.171",
+            'key' => $OperationController->_encryptResponse("2B225AD3AA04A411812CE0DD138635347D407E056E9C6BA636F3F4C1614650CC"),
+            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+        ]);      
+        
+        /**
+         * DASH / navi
+         */
+        PrivateKey::create([
+            'user_id' => $navi->id,
             'coin_id' => $DASH->id,
-            'ip' => "3.85.71.117",
+            'ip' => "54.173.190.32",
             'key' => $OperationController->_encryptResponse("4D6C0EE1291179592192D60EE9049799E70BAFAFA8C3DE35088DFA913C4BF1D8"),
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
         ]);
 
         /**
-         * LITE / NAVIPAY
+         * LITE / navi
          */
         PrivateKey::create([
-            'user_id' => $navipay->id,
+            'user_id' => $navi->id,
             'coin_id' => $LTC->id,
-            'ip' => "3.223.22.142",
+            'ip' => "3.83.86.185",
             'key' => $OperationController->_encryptResponse("B32618C4454291804583CA14DA6F3702B0F08F5F9D009DE47C337636FA5AE2B1"),
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
         ]);
 
         /**
-         * BCH / NAVIPAY
+         * BCH / navi
          */
         PrivateKey::create([
-            'user_id' => $navipay->id,
+            'user_id' => $navi->id,
             'coin_id' => $BCH->id,
-            'ip' => "3.222.62.152",
+            'ip' => "3.86.82.13",
             'key' => $OperationController->_encryptResponse("7E9DBC721298F90175C8B5D23604E18BDE67280EC54A30E332386A821668AE29"),
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
-        ]);
+        ]);        
+
+
     }
 
 }
