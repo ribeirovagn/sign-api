@@ -221,8 +221,8 @@ class CoinSeeder extends Seeder
             'user_id' => $navi->id,
             'coin_id' => $BTC->id,
             'ip' => "3.219.68.171",
-            'key' => $OperationController->_encryptResponse("2B225AD3AA04A411812CE0DD138635347D407E056E9C6BA636F3F4C1614650CC"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'key' => $OperationController->_encryptResponse("9A298C029AF6829A75BB7AAC163455B1CBE1812A05C00642161583FE06C6DF12"),
+            'redeemScript' => $OperationController->_encryptResponse("52210292b2745de11dbfb0e6e4fda7ea10d732f0e3ecd73b06b8bc5decb6f15576c63f210323cfc4842d3c7a75a6f89cd33d624cd685b90ccc8be080aa108e944b58b2eadb21039982d028ab18602df7e78f9cd9fcc6fd1a5de31fd3be29eb13c5a1ce77e9504253ae"),
         ]);      
         
         /**
@@ -232,8 +232,8 @@ class CoinSeeder extends Seeder
             'user_id' => $navi->id,
             'coin_id' => $DASH->id,
             'ip' => "54.173.190.32",
-            'key' => $OperationController->_encryptResponse("4D6C0EE1291179592192D60EE9049799E70BAFAFA8C3DE35088DFA913C4BF1D8"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'key' => $OperationController->_encryptResponse("5b37cea71e4aac8f438ad42b55de2c55f0968d3b490a16bdf80b648f7a70ad4d"),
+            'redeemScript' => $OperationController->_encryptResponse("52210211202e59066b60fb152c91f577043fc81c4cf146e8d9ec1fa152059f7d23ee692102c1c6be982145d9fda0387d8d78becd3e78cb6ae274688dd31dcb014393275c84210221000200301e64021367cefd76a01ba31d0adbf3cfd8e7aaa1c4d26cc02b87d253ae"),
         ]);
 
         /**
@@ -253,12 +253,22 @@ class CoinSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $navi->id,
             'coin_id' => $BCH->id,
-            'ip' => "3.86.82.13",
-            'key' => $OperationController->_encryptResponse("7E9DBC721298F90175C8B5D23604E18BDE67280EC54A30E332386A821668AE29"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'ip' => "18.208.168.209",
+            'key' => $OperationController->_encryptResponse("5b37cea71e4aac8f438ad42b55de2c55f0968d3b490a16bdf80b648f7a70ad4d"),
+            'redeemScript' => $OperationController->_encryptResponse("522103c3e839f8f4e3839733d8c0c36ec958b2f80eb7eb291c3fd8c5638c979251a75f2102aaef2645ed9f93cfa0f6ecd655f38b85ba3c97b57f02974d73cba79e3645feca2103d4045cc46f8ef982daff9f10a0a4b7ebfbd531ae68792ce6976fb84772ddad1453ae"),
         ]);        
 
 
+        /**
+         * ZCASH / navi
+         */
+        PrivateKey::create([
+            'user_id' => $navi->id,
+            'coin_id' => $ZEC->id,
+            'ip' => "184.72.180.224",
+            'key' => $OperationController->_encryptResponse("ea699f9a7ce7afe84472c77fe91300537091ee292162c620adceb4e7a6ba0b08"),
+            'redeemScript' => $OperationController->_encryptResponse("522103c3e839f8f4e3839733d8c0c36ec958b2f80eb7eb291c3fd8c5638c979251a75f2102aaef2645ed9f93cfa0f6ecd655f38b85ba3c97b57f02974d73cba79e3645feca2103d4045cc46f8ef982daff9f10a0a4b7ebfbd531ae68792ce6976fb84772ddad1453ae"),
+        ]);   
     }
 
 }
