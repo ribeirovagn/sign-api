@@ -26,10 +26,14 @@ class CoinSeeder extends Seeder
         $navipay = User::create([
             'name' => 'navipay',
         ]);
-
         $interpags = User::create([
             'name' => 'interpags',
         ]);
+        $infinitypay = User::create([
+            'name' => 'infinitypay',
+        ]);
+
+
         $BTC = Coin::create([
             'name' => 'Bitcoin',
             'abbr' => 'BTC',
@@ -304,6 +308,22 @@ class CoinSeeder extends Seeder
             'key' => $OperationController->_encryptResponse("d02d7814e1889f71089a7ef6c889c675f8a7e08da7f7929a6e11aeff21451721"),
             'redeemScript' => $OperationController->_encryptResponse("vagner_ribeiro"),
         ]);      
+
+
+
+
+
+
+         /**
+         * BTC / Infinity
+         */
+        PrivateKey::create([
+            'user_id' => $infinitypay->id,
+            'coin_id' => $BTC->id,
+            'ip' => "172.31.14.179",
+            'key' => $OperationController->_encryptResponse("6A5E7BB4CE1A004FF1FA8E30B58527D23B8B62B8ED9BA8F1F795B23009DF2D08"),
+            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+        ]);
 
     }
 }
