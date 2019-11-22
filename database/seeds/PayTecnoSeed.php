@@ -19,10 +19,9 @@ class PayTecnoSeed extends Seeder
             'name' => 'PayTecno',
         ]);
 
-
         $BTC = Coin::where('abbr', 'BTC')->first();
-        $OperationController = new OperationController();
 
+        $OperationController = new OperationController();
 
         /**
          * BTC / PayTecno
