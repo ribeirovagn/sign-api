@@ -63,7 +63,7 @@ class PrivateKeyController extends Controller {
         } catch (\Exception $ex) {
             return $ex->getMessage();
         }
-    }
+    } 
 
     /**
      * Display the specified resource.

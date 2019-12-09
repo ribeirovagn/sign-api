@@ -99,7 +99,7 @@ class CoinSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $liquidex->id,
             'coin_id' => $BTC->id,
-            'ip' => "172.31.14.179",
+            'ip' => "177.38.215.12",
             'key' => $OperationController->_encryptResponse("1fbc6728a61caec3c8b935cc0ccd943f9ecdd13acaf1b0e85a721030f43c17191c62c12a7cb493a04acca26f67c785613f14"),
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
         ]);
@@ -110,7 +110,7 @@ class CoinSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $liquidex->id,
             'coin_id' => $DASH->id,
-            'ip' => "172.31.35.87",
+            'ip' => "177.38.215.13",
             'key' => $OperationController->_encryptResponse("5b37cea71e4aac8f438ad42b55de2c55f0968d3b490a16bdf80b648f7a70ad4d"),
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
         ]);
@@ -121,7 +121,7 @@ class CoinSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $liquidex->id,
             'coin_id' => $LTC->id,
-            'ip' => "172.31.14.205",
+            'ip' => "177.38.215.10",
             'key' => $OperationController->_encryptResponse("983b911c3b0af63818a15f995447f4d424a155d4092f46a0ecf30b11e5e43b3a"),
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
         ]);
@@ -132,7 +132,7 @@ class CoinSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $liquidex->id,
             'coin_id' => $BCH->id,
-            'ip' => "172.31.2.158",
+            'ip' => "177.38.215.9",
             'key' => $OperationController->_encryptResponse("5b37cea71e4aac8f438ad42b55de2c55f0968d3b490a16bdf80b648f7a70ad4d"),
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
         ]);
@@ -142,22 +142,10 @@ class CoinSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $liquidex->id,
             'coin_id' => $LQX->id,
-            'ip' => "172.31.31.242",
+            'ip' => "177.38.215.8",
             'key' => $OperationController->_encryptResponse("4B4CEE42FFC0111BAD1155898ED5BF336DF752E8303D5EBA6B695F27ECFF09A3"),
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
-        ]);
-        
-        /**
-         * LQX / Liquidex
-         */
-        PrivateKey::create([
-            'user_id' => $liquidex->id,
-            'coin_id' => $ETH->id,
-            'ip' => "127.0.0.1",
-            'key' => $OperationController->_encryptResponse("humble vehicle spend alarm subway message cousin air level document region escape"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
-        ]);
-                
+        ]);                
         
         
         /////////////////  ///////////////////////////
@@ -177,17 +165,7 @@ class CoinSeeder extends Seeder
         //////////////////////  //////////////////////
         ////////////////////////  ////////////////////
         
-        
-        /**
-         * LQX / NAVIPAY
-         */
-        PrivateKey::create([
-            'user_id' => $navipay->id,
-            'coin_id' => $LQX->id,
-            'ip' => "52.23.55.199",
-            'key' => $OperationController->_encryptResponse("1A0ABF27B294583CE8C1DA5B10C883CCFAD28B099BF2C87443786426ABEBD3D7"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
-        ]);
+  
         
         /**
          * BTC / NAVIPAY
@@ -195,7 +173,7 @@ class CoinSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $navipay->id,
             'coin_id' => $BTC->id,
-            'ip' => "3.219.68.171",
+            'ip' => "177.38.215.12",
             'key' => $OperationController->_encryptResponse("2B225AD3AA04A411812CE0DD138635347D407E056E9C6BA636F3F4C1614650CC"),
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
         ]);      
@@ -245,7 +223,7 @@ class CoinSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $navi->id,
             'coin_id' => $BTC->id,
-            'ip' => "172.31.14.179",
+            'ip' => "177.38.215.12",
             'key' => $OperationController->_encryptResponse("9A298C029AF6829A75BB7AAC163455B1CBE1812A05C00642161583FE06C6DF12"),
             'redeemScript' => $OperationController->_encryptResponse("52210292b2745de11dbfb0e6e4fda7ea10d732f0e3ecd73b06b8bc5decb6f15576c63f210323cfc4842d3c7a75a6f89cd33d624cd685b90ccc8be080aa108e944b58b2eadb21039982d028ab18602df7e78f9cd9fcc6fd1a5de31fd3be29eb13c5a1ce77e9504253ae"),
         ]);      
@@ -304,7 +282,7 @@ class CoinSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $interpags->id,
             'coin_id' => $BTC->id,
-            'ip' => "172.31.14.179",
+            'ip' => "177.38.215.12",
             'key' => $OperationController->_encryptResponse("d02d7814e1889f71089a7ef6c889c675f8a7e08da7f7929a6e11aeff21451721"),
             'redeemScript' => $OperationController->_encryptResponse("vagner_ribeiro"),
         ]);      
@@ -320,7 +298,7 @@ class CoinSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $infinitypay->id,
             'coin_id' => $BTC->id,
-            'ip' => "172.31.14.179",
+            'ip' => "177.38.215.12",
             'key' => $OperationController->_encryptResponse("6A5E7BB4CE1A004FF1FA8E30B58527D23B8B62B8ED9BA8F1F795B23009DF2D08"),
             'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
         ]);
