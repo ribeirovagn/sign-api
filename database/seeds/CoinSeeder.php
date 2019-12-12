@@ -20,11 +20,8 @@ class CoinSeeder extends Seeder
         $liquidex = User::create([
             'name' => 'liquidex',
         ]);
-        $navi = User::create([
-            'name' => 'navicapital',
-        ]);
-        $navipay = User::create([
-            'name' => 'navipay',
+        $infinity = User::create([
+            'name' => 'infinity',
         ]);
         $interpags = User::create([
             'name' => 'interpags',
@@ -101,7 +98,7 @@ class CoinSeeder extends Seeder
             'coin_id' => $BTC->id,
             'ip' => "177.38.215.12",
             'key' => $OperationController->_encryptResponse("1fbc6728a61caec3c8b935cc0ccd943f9ecdd13acaf1b0e85a721030f43c17191c62c12a7cb493a04acca26f67c785613f14"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
         ]);
 
         /**
@@ -112,7 +109,7 @@ class CoinSeeder extends Seeder
             'coin_id' => $DASH->id,
             'ip' => "177.38.215.13",
             'key' => $OperationController->_encryptResponse("5b37cea71e4aac8f438ad42b55de2c55f0968d3b490a16bdf80b648f7a70ad4d"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
         ]);
 
         /**
@@ -123,7 +120,7 @@ class CoinSeeder extends Seeder
             'coin_id' => $LTC->id,
             'ip' => "177.38.215.10",
             'key' => $OperationController->_encryptResponse("983b911c3b0af63818a15f995447f4d424a155d4092f46a0ecf30b11e5e43b3a"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
         ]);
 
         /**
@@ -134,7 +131,7 @@ class CoinSeeder extends Seeder
             'coin_id' => $BCH->id,
             'ip' => "177.38.215.9",
             'key' => $OperationController->_encryptResponse("5b37cea71e4aac8f438ad42b55de2c55f0968d3b490a16bdf80b648f7a70ad4d"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
         ]);
         /**
          * LQX / Liquidex
@@ -144,7 +141,7 @@ class CoinSeeder extends Seeder
             'coin_id' => $LQX->id,
             'ip' => "177.38.215.8",
             'key' => $OperationController->_encryptResponse("4B4CEE42FFC0111BAD1155898ED5BF336DF752E8303D5EBA6B695F27ECFF09A3"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
         ]);                
         
         
@@ -168,16 +165,51 @@ class CoinSeeder extends Seeder
   
         
         /**
-         * BTC / NAVIPAY
+         * BTC / INFINITY
          */
         PrivateKey::create([
-            'user_id' => $navipay->id,
+            'user_id' => $infinity->id,
             'coin_id' => $BTC->id,
             'ip' => "177.38.215.12",
             'key' => $OperationController->_encryptResponse("2B225AD3AA04A411812CE0DD138635347D407E056E9C6BA636F3F4C1614650CC"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
         ]);      
         
+
+        /**
+         * BCH / INFINITY
+         */
+        PrivateKey::create([
+            'user_id' => $infinity->id,
+            'coin_id' => $BCH->id,
+            'ip' => "177.38.215.14",
+            'key' => $OperationController->_encryptResponse("06439B3D0D7B6CC838DFA3D208843F57B10972FDC5509157E4B1AB1766B29FBC"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
+        ]);      
+
+
+        /**
+         * DASH / INFINITY
+         */
+        PrivateKey::create([
+            'user_id' => $infinity->id,
+            'coin_id' => $DASH->id,
+            'ip' => "177.38.215.16",
+            'key' => $OperationController->_encryptResponse("4ED184B1E3F0A7D1C1A1F11CA2C45791485F895F156BBDDC43355193D4B12336"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
+        ]);      
+
+
+        /**
+         * LTC / INFINITY
+         */
+        PrivateKey::create([
+            'user_id' => $infinity->id,
+            'coin_id' => $LTC->id,
+            'ip' => "177.38.215.15",
+            'key' => $OperationController->_encryptResponse("23FEF12CD568178A97827606E4ED8241419FABC8449A792A25ABE7E0C97E6685"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
+        ]);      
 
         /**
          * 
@@ -247,7 +279,7 @@ class CoinSeeder extends Seeder
             'coin_id' => $LTC->id,
             'ip' => "172.31.47.232",
             'key' => $OperationController->_encryptResponse("B32618C4454291804583CA14DA6F3702B0F08F5F9D009DE47C337636FA5AE2B1"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
         ]);
 
         /**
@@ -300,7 +332,7 @@ class CoinSeeder extends Seeder
             'coin_id' => $BTC->id,
             'ip' => "177.38.215.12",
             'key' => $OperationController->_encryptResponse("6A5E7BB4CE1A004FF1FA8E30B58527D23B8B62B8ED9BA8F1F795B23009DF2D08"),
-            'redeemScript' => $OperationController->_encryptResponse("VAGN_BLOCKCHAINIUS"),
+            'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
         ]);
 
     }
