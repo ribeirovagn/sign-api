@@ -30,7 +30,7 @@ class PayTecnoSeed extends Seeder
         PrivateKey::create([
             'user_id' => $paytecno->id,
             'coin_id' => $BTC->id,
-            'ip' => "172.31.67.199",
+            'ip' => "177.38.215.19",
             'key' => $OperationController->_encryptResponse("329DDEEC58D0A1E99B6269F9CEA099D685874F0077803775DE3521A2A366EC75"),
             'redeemScript' => $OperationController->_encryptResponse("LUST I.T"),
         ]);
