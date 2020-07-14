@@ -15,7 +15,7 @@ class PayTecnoSeed extends Seeder
      */
     public function run()
     {
-        $paytecno = User::where('name', 'PayTecno')->first();
+        $paytecno = User::where('name', 'paytecno')->first();
         
         $BTC = Coin::where('abbr', 'BTC')->first();
         $LTC = Coin::where('abbr', 'LTC')->first();

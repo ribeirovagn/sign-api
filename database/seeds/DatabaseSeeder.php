@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
 //         $this->call(KeySeeder::class);
          $this->call(CoinSeeder::class);
+         $this->call(AddB4uSeeder::class);
     }
 }
