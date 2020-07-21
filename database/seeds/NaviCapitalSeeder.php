@@ -7,9 +7,7 @@ use App\PrivateKey;
 use App\User;
 use Illuminate\Database\Seeder;
 
-use Illuminate\Database\Seeder;
-
-class NaviCapitalSeeder extends Seeder
+class B4UCapitalSeeder extends Seeder
 {
     /**
      * Run the database seeds.

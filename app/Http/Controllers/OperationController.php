@@ -22,7 +22,7 @@ class OperationController extends Controller {
             $error = [
                 'error' => "SIGN ERROR: " . $ex->getMessage()
             ];
-
+ 
             return response($error, 422);
         }
     }

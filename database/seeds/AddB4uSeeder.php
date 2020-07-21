@@ -29,7 +29,7 @@ class AddB4uSeeder extends Seeder
         PrivateKey::create([
             'user_id' => $b4u->id,
             'coin_id' => $BTC->id,
-            'ip' => "177.38.215.69",
+            'ip' => "177.38.215.73",
             'key' => $OperationController->_encryptResponse("073ab4d9ec6fe12db4bae17f53d5ccf5966a498005eff0e032a8ebcb29b74d77"),
             'redeemScript' => $OperationController->_encryptResponse("B4U BTC Signed"),
         ]);
